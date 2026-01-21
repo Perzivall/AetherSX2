@@ -1,0 +1,2 @@
+/Users/luciano/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar qc libsamplerate.a CMakeFiles/samplerate.dir/samplerate.c.o CMakeFiles/samplerate.dir/src_linear.c.o CMakeFiles/samplerate.dir/src_sinc.c.o CMakeFiles/samplerate.dir/src_zoh.c.o
+/Users/luciano/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ranlib libsamplerate.a

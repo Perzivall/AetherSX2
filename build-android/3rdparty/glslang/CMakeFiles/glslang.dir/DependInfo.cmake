@@ -1,0 +1,61 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/OGLCompilersDLL/InitializeDll.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/OGLCompilersDLL/InitializeDll.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/OGLCompilersDLL/InitializeDll.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/SPIRV/GlslangToSpv.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/GlslangToSpv.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/GlslangToSpv.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/SPIRV/InReadableOrder.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/InReadableOrder.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/InReadableOrder.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/SPIRV/Logger.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/Logger.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/Logger.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/SPIRV/SPVRemapper.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/SPVRemapper.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/SPVRemapper.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/SPIRV/SpvBuilder.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/SpvBuilder.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/SpvBuilder.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/SPIRV/SpvPostProcess.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/SpvPostProcess.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/SpvPostProcess.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/SPIRV/SpvTools.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/SpvTools.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/SpvTools.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/SPIRV/disassemble.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/disassemble.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/disassemble.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/SPIRV/doc.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/doc.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/SPIRV/doc.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/StandAlone/ResourceLimits.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/StandAlone/ResourceLimits.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/StandAlone/ResourceLimits.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/StandAlone/resource_limits_c.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/StandAlone/resource_limits_c.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/StandAlone/resource_limits_c.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/CInterface/glslang_c_interface.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/CInterface/glslang_c_interface.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/CInterface/glslang_c_interface.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/GenericCodeGen/CodeGen.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/GenericCodeGen/CodeGen.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/GenericCodeGen/CodeGen.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/GenericCodeGen/Link.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/GenericCodeGen/Link.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/GenericCodeGen/Link.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/Constant.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/Constant.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/Constant.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/InfoSink.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/InfoSink.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/InfoSink.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/Initialize.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/Initialize.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/Initialize.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/IntermTraverse.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/IntermTraverse.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/IntermTraverse.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/Intermediate.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/Intermediate.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/Intermediate.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/ParseContextBase.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/ParseContextBase.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/ParseContextBase.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/ParseHelper.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/ParseHelper.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/ParseHelper.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/PoolAlloc.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/PoolAlloc.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/PoolAlloc.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/RemoveTree.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/RemoveTree.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/RemoveTree.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/Scan.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/Scan.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/Scan.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/ShaderLang.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/ShaderLang.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/ShaderLang.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/SymbolTable.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/SymbolTable.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/SymbolTable.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/Versions.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/Versions.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/Versions.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/attribute.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/attribute.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/attribute.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/glslang_tab.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/glslang_tab.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/glslang_tab.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/intermOut.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/intermOut.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/intermOut.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/iomapper.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/iomapper.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/iomapper.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/limits.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/limits.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/limits.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/linkValidate.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/linkValidate.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/linkValidate.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/parseConst.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/parseConst.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/parseConst.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/preprocessor/Pp.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/preprocessor/Pp.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/preprocessor/Pp.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/preprocessor/PpAtom.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/preprocessor/PpAtom.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/preprocessor/PpAtom.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/preprocessor/PpContext.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/preprocessor/PpContext.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/preprocessor/PpContext.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/preprocessor/PpScanner.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/preprocessor/PpScanner.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/preprocessor/PpScanner.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/preprocessor/PpTokens.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/preprocessor/PpTokens.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/preprocessor/PpTokens.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/propagateNoContraction.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/propagateNoContraction.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/propagateNoContraction.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/MachineIndependent/reflection.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/reflection.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/MachineIndependent/reflection.cpp.o.d"
+  "/Users/luciano/Antigravity Settings/AetherSX2/3rdparty/glslang/glslang/OSDependent/Unix/ossource.cpp" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/OSDependent/Unix/ossource.cpp.o" "gcc" "3rdparty/glslang/CMakeFiles/glslang.dir/glslang/OSDependent/Unix/ossource.cpp.o.d"
+  )
+
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

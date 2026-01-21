@@ -1,0 +1,41 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/vixl.dir/src/aarch64/assembler-aarch64.cc.o"
+  "CMakeFiles/vixl.dir/src/aarch64/assembler-aarch64.cc.o.d"
+  "CMakeFiles/vixl.dir/src/aarch64/cpu-aarch64.cc.o"
+  "CMakeFiles/vixl.dir/src/aarch64/cpu-aarch64.cc.o.d"
+  "CMakeFiles/vixl.dir/src/aarch64/cpu-features-auditor-aarch64.cc.o"
+  "CMakeFiles/vixl.dir/src/aarch64/cpu-features-auditor-aarch64.cc.o.d"
+  "CMakeFiles/vixl.dir/src/aarch64/decoder-aarch64.cc.o"
+  "CMakeFiles/vixl.dir/src/aarch64/decoder-aarch64.cc.o.d"
+  "CMakeFiles/vixl.dir/src/aarch64/disasm-aarch64.cc.o"
+  "CMakeFiles/vixl.dir/src/aarch64/disasm-aarch64.cc.o.d"
+  "CMakeFiles/vixl.dir/src/aarch64/instructions-aarch64.cc.o"
+  "CMakeFiles/vixl.dir/src/aarch64/instructions-aarch64.cc.o.d"
+  "CMakeFiles/vixl.dir/src/aarch64/instrument-aarch64.cc.o"
+  "CMakeFiles/vixl.dir/src/aarch64/instrument-aarch64.cc.o.d"
+  "CMakeFiles/vixl.dir/src/aarch64/logic-aarch64.cc.o"
+  "CMakeFiles/vixl.dir/src/aarch64/logic-aarch64.cc.o.d"
+  "CMakeFiles/vixl.dir/src/aarch64/macro-assembler-aarch64.cc.o"
+  "CMakeFiles/vixl.dir/src/aarch64/macro-assembler-aarch64.cc.o.d"
+  "CMakeFiles/vixl.dir/src/aarch64/operands-aarch64.cc.o"
+  "CMakeFiles/vixl.dir/src/aarch64/operands-aarch64.cc.o.d"
+  "CMakeFiles/vixl.dir/src/aarch64/pointer-auth-aarch64.cc.o"
+  "CMakeFiles/vixl.dir/src/aarch64/pointer-auth-aarch64.cc.o.d"
+  "CMakeFiles/vixl.dir/src/aarch64/simulator-aarch64.cc.o"
+  "CMakeFiles/vixl.dir/src/aarch64/simulator-aarch64.cc.o.d"
+  "CMakeFiles/vixl.dir/src/code-buffer-vixl.cc.o"
+  "CMakeFiles/vixl.dir/src/code-buffer-vixl.cc.o.d"
+  "CMakeFiles/vixl.dir/src/compiler-intrinsics-vixl.cc.o"
+  "CMakeFiles/vixl.dir/src/compiler-intrinsics-vixl.cc.o.d"
+  "CMakeFiles/vixl.dir/src/cpu-features.cc.o"
+  "CMakeFiles/vixl.dir/src/cpu-features.cc.o.d"
+  "CMakeFiles/vixl.dir/src/utils-vixl.cc.o"
+  "CMakeFiles/vixl.dir/src/utils-vixl.cc.o.d"
+  "libvixl.a"
+  "libvixl.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/vixl.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

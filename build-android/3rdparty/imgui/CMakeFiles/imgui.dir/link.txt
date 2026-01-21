@@ -1,0 +1,2 @@
+/Users/luciano/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar qc libimgui.a CMakeFiles/imgui.dir/src/imgui.cpp.o CMakeFiles/imgui.dir/src/imgui_demo.cpp.o CMakeFiles/imgui.dir/src/imgui_draw.cpp.o CMakeFiles/imgui.dir/src/imgui_impl_opengl3.cpp.o CMakeFiles/imgui.dir/src/imgui_stdlib.cpp.o CMakeFiles/imgui.dir/src/imgui_tables.cpp.o CMakeFiles/imgui.dir/src/imgui_widgets.cpp.o
+/Users/luciano/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ranlib libimgui.a

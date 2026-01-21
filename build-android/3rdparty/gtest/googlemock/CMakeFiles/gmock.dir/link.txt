@@ -1,0 +1,2 @@
+/Users/luciano/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ar qc ../../../lib/libgmock.a CMakeFiles/gmock.dir/src/gmock-all.cc.o
+/Users/luciano/Library/Android/sdk/ndk/28.2.13676358/toolchains/llvm/prebuilt/darwin-x86_64/bin/llvm-ranlib ../../../lib/libgmock.a
