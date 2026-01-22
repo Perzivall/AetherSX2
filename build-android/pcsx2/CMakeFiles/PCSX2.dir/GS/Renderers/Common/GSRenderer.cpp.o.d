@@ -1140,6 +1140,7 @@ pcsx2/CMakeFiles/PCSX2.dir/GS/Renderers/Common/GSRenderer.cpp.o: \
   /Users/luciano/Antigravity\ Settings/AetherSX2/pcsx2/./GS/GSPng.h \
   /Users/luciano/Antigravity\ Settings/AetherSX2/pcsx2/./GS/GSThread_CXX11.h \
   /Users/luciano/Antigravity\ Settings/AetherSX2/common/../common/boost_spsc_queue.hpp \
+  /Users/luciano/Antigravity\ Settings/AetherSX2/common/../pcsx2/RemotePlay/RemotePlay.h \
   /Users/luciano/Antigravity\ Settings/AetherSX2/pcsx2/./Host.h \
   /Users/luciano/Antigravity\ Settings/AetherSX2/pcsx2/./HostDisplay.h \
   /Users/luciano/Antigravity\ Settings/AetherSX2/common/../common/StringUtil.h \

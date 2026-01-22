@@ -15,6 +15,7 @@
 
 #include "PrecompiledHeader.h"
 #include "GSRenderer.h"
+#include "pcsx2/RemotePlay/RemotePlay.h"
 #include "Host.h"
 #include "HostDisplay.h"
 #include "pcsx2/Config.h"
@@ -356,6 +357,23 @@ void GSRenderer::VSync(int field)
 		Host::EndPresentFrame();
 	}
 	m_dev->RestoreAPIState();
+	
+	// RemotePlay Hook
+	static bool rp_init = false;
+	if (!rp_init) {
+		Aether::RemotePlay::Get().Start(8080);
+		rp_init = true; 
+	}
+
+	if (Aether::RemotePlay::Get().IsActive()) {
+		std::vector<u32> pixels; 
+		GSVector2i res = GetInternalResolution();
+		if (res.x > 0 && res.y > 0) {
+			if (SaveSnapshotToMemory(res.x, res.y, &pixels)) {
+				Aether::RemotePlay::Get().Frame(res.x, res.y, pixels);
+			}
+		}
+	}
 
 	// snapshot
 

@@ -158,6 +158,10 @@ CXX_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fs
 
 # PCH options: pcsx2/CMakeFiles/PCSX2.dir/VUops.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/Users/luciano/Antigravity Settings/AetherSX2/build-android/pcsx2/CMakeFiles/PCSX2.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/Users/luciano/Antigravity Settings/AetherSX2/build-android/pcsx2/CMakeFiles/PCSX2.dir/cmake_pch.hxx
 
+# PCH options: pcsx2/CMakeFiles/PCSX2.dir/RemotePlay/RemotePlay.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/Users/luciano/Antigravity Settings/AetherSX2/build-android/pcsx2/CMakeFiles/PCSX2.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/Users/luciano/Antigravity Settings/AetherSX2/build-android/pcsx2/CMakeFiles/PCSX2.dir/cmake_pch.hxx
+
+# PCH options: pcsx2/CMakeFiles/PCSX2.dir/__/3rdparty/jpgd/jpge.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/Users/luciano/Antigravity Settings/AetherSX2/build-android/pcsx2/CMakeFiles/PCSX2.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/Users/luciano/Antigravity Settings/AetherSX2/build-android/pcsx2/CMakeFiles/PCSX2.dir/cmake_pch.hxx
+
 # PCH options: pcsx2/CMakeFiles/PCSX2.dir/IPU/IPU.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/Users/luciano/Antigravity Settings/AetherSX2/build-android/pcsx2/CMakeFiles/PCSX2.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/Users/luciano/Antigravity Settings/AetherSX2/build-android/pcsx2/CMakeFiles/PCSX2.dir/cmake_pch.hxx
 
 # PCH options: pcsx2/CMakeFiles/PCSX2.dir/IPU/IPU_Fifo.cpp.o_OPTIONS = -Winvalid-pch;-Xclang;-include-pch;-Xclang;/Users/luciano/Antigravity Settings/AetherSX2/build-android/pcsx2/CMakeFiles/PCSX2.dir/cmake_pch.hxx.pch;-Xclang;-include;-Xclang;/Users/luciano/Antigravity Settings/AetherSX2/build-android/pcsx2/CMakeFiles/PCSX2.dir/cmake_pch.hxx

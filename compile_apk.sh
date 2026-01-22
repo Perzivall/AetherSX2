@@ -74,10 +74,15 @@ mkdir apk
 cd apk
 
 # Copia o APK base (assume que está na raiz do projeto, dois níveis acima deste diretório 'build-android/apk')
-if [ -f "../../app-release-unsigned.apk" ]; then
+# Copia o APK base
+if [ -f "../../app-release-patched.apk" ]; then
+    echo "Usando APK com patch de permissões..."
+    cp ../../app-release-patched.apk aethersx2.apk
+elif [ -f "../../app-release-unsigned.apk" ]; then
+    echo "ALERTA: Usando APK original sem permissões de rede..."
     cp ../../app-release-unsigned.apk aethersx2.apk
 else
-    echo "ERRO: app-release-unsigned.apk não encontrado na raiz do projeto."
+    echo "ERRO: Nenhum APK base encontrado."
     exit 1
 fi
 

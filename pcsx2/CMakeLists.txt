@@ -195,7 +195,9 @@ set(pcsx2Sources
 	VU1microInterp.cpp
 	VUflags.cpp
 	VUmicroMem.cpp
-	VUops.cpp)
+	VUops.cpp
+	RemotePlay/RemotePlay.cpp
+	../3rdparty/jpgd/jpge.cpp)
 
 # Main pcsx2 header
 set(pcsx2Headers
@@ -253,7 +255,8 @@ set(pcsx2Headers
 	vtlb.h
 	VUflags.h
 	VUmicro.h
-	VUops.h)
+	VUops.h
+	RemotePlay/RemotePlay.h)
 
 set(pcsx2IPCSources
 	IPC.cpp

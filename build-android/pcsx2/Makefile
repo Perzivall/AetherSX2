@@ -4136,6 +4136,30 @@ R5900OpcodeTables.cpp.s:
 	cd "/Users/luciano/Antigravity Settings/AetherSX2/build-android" && $(MAKE) $(MAKESILENT) -f pcsx2/CMakeFiles/PCSX2.dir/build.make pcsx2/CMakeFiles/PCSX2.dir/R5900OpcodeTables.cpp.s
 .PHONY : R5900OpcodeTables.cpp.s
 
+RemotePlay/RemotePlay.o: RemotePlay/RemotePlay.cpp.o
+.PHONY : RemotePlay/RemotePlay.o
+
+# target to build an object file
+RemotePlay/RemotePlay.cpp.o:
+	cd "/Users/luciano/Antigravity Settings/AetherSX2/build-android" && $(MAKE) $(MAKESILENT) -f pcsx2/CMakeFiles/PCSX2.dir/build.make pcsx2/CMakeFiles/PCSX2.dir/RemotePlay/RemotePlay.cpp.o
+.PHONY : RemotePlay/RemotePlay.cpp.o
+
+RemotePlay/RemotePlay.i: RemotePlay/RemotePlay.cpp.i
+.PHONY : RemotePlay/RemotePlay.i
+
+# target to preprocess a source file
+RemotePlay/RemotePlay.cpp.i:
+	cd "/Users/luciano/Antigravity Settings/AetherSX2/build-android" && $(MAKE) $(MAKESILENT) -f pcsx2/CMakeFiles/PCSX2.dir/build.make pcsx2/CMakeFiles/PCSX2.dir/RemotePlay/RemotePlay.cpp.i
+.PHONY : RemotePlay/RemotePlay.cpp.i
+
+RemotePlay/RemotePlay.s: RemotePlay/RemotePlay.cpp.s
+.PHONY : RemotePlay/RemotePlay.s
+
+# target to generate assembly for a file
+RemotePlay/RemotePlay.cpp.s:
+	cd "/Users/luciano/Antigravity Settings/AetherSX2/build-android" && $(MAKE) $(MAKESILENT) -f pcsx2/CMakeFiles/PCSX2.dir/build.make pcsx2/CMakeFiles/PCSX2.dir/RemotePlay/RemotePlay.cpp.s
+.PHONY : RemotePlay/RemotePlay.cpp.s
+
 SPR.o: SPR.cpp.o
 .PHONY : SPR.o
 
@@ -5336,6 +5360,30 @@ Vif_Unpack.cpp.s:
 	cd "/Users/luciano/Antigravity Settings/AetherSX2/build-android" && $(MAKE) $(MAKESILENT) -f pcsx2/CMakeFiles/PCSX2.dir/build.make pcsx2/CMakeFiles/PCSX2.dir/Vif_Unpack.cpp.s
 .PHONY : Vif_Unpack.cpp.s
 
+__/3rdparty/jpgd/jpge.o: __/3rdparty/jpgd/jpge.cpp.o
+.PHONY : __/3rdparty/jpgd/jpge.o
+
+# target to build an object file
+__/3rdparty/jpgd/jpge.cpp.o:
+	cd "/Users/luciano/Antigravity Settings/AetherSX2/build-android" && $(MAKE) $(MAKESILENT) -f pcsx2/CMakeFiles/PCSX2.dir/build.make pcsx2/CMakeFiles/PCSX2.dir/__/3rdparty/jpgd/jpge.cpp.o
+.PHONY : __/3rdparty/jpgd/jpge.cpp.o
+
+__/3rdparty/jpgd/jpge.i: __/3rdparty/jpgd/jpge.cpp.i
+.PHONY : __/3rdparty/jpgd/jpge.i
+
+# target to preprocess a source file
+__/3rdparty/jpgd/jpge.cpp.i:
+	cd "/Users/luciano/Antigravity Settings/AetherSX2/build-android" && $(MAKE) $(MAKESILENT) -f pcsx2/CMakeFiles/PCSX2.dir/build.make pcsx2/CMakeFiles/PCSX2.dir/__/3rdparty/jpgd/jpge.cpp.i
+.PHONY : __/3rdparty/jpgd/jpge.cpp.i
+
+__/3rdparty/jpgd/jpge.s: __/3rdparty/jpgd/jpge.cpp.s
+.PHONY : __/3rdparty/jpgd/jpge.s
+
+# target to generate assembly for a file
+__/3rdparty/jpgd/jpge.cpp.s:
+	cd "/Users/luciano/Antigravity Settings/AetherSX2/build-android" && $(MAKE) $(MAKESILENT) -f pcsx2/CMakeFiles/PCSX2.dir/build.make pcsx2/CMakeFiles/PCSX2.dir/__/3rdparty/jpgd/jpge.cpp.s
+.PHONY : __/3rdparty/jpgd/jpge.cpp.s
+
 # target to build an object file
 cmake_pch.hxx.pch:
 	cd "/Users/luciano/Antigravity Settings/AetherSX2/build-android" && $(MAKE) $(MAKESILENT) -f pcsx2/CMakeFiles/PCSX2.dir/build.make pcsx2/CMakeFiles/PCSX2.dir/cmake_pch.hxx.pch
@@ -6051,6 +6099,9 @@ help:
 	@echo "... R5900OpcodeTables.o"
 	@echo "... R5900OpcodeTables.i"
 	@echo "... R5900OpcodeTables.s"
+	@echo "... RemotePlay/RemotePlay.o"
+	@echo "... RemotePlay/RemotePlay.i"
+	@echo "... RemotePlay/RemotePlay.s"
 	@echo "... SPR.o"
 	@echo "... SPR.i"
 	@echo "... SPR.s"
@@ -6201,6 +6252,9 @@ help:
 	@echo "... Vif_Unpack.o"
 	@echo "... Vif_Unpack.i"
 	@echo "... Vif_Unpack.s"
+	@echo "... __/3rdparty/jpgd/jpge.o"
+	@echo "... __/3rdparty/jpgd/jpge.i"
+	@echo "... __/3rdparty/jpgd/jpge.s"
 	@echo "... cmake_pch.hxx.pch"
 	@echo "... cmake_pch.hxx.i"
 	@echo "... cmake_pch.hxx.s"
