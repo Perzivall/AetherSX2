@@ -454,7 +454,7 @@ PACKAGE_MODE:BOOL=OFF
 PKG_CONFIG_ARGN:STRING=
 
 //pkg-config executable
-PKG_CONFIG_EXECUTABLE:FILEPATH=PKG_CONFIG_EXECUTABLE-NOTFOUND
+PKG_CONFIG_EXECUTABLE:FILEPATH=/opt/homebrew/bin/pkg-config
 
 //Build portaudio support on SPU2
 PORTAUDIO_API:BOOL=ON
@@ -860,6 +860,8 @@ DART_TESTING_TIMEOUT-ADVANCED:INTERNAL=1
 EGL_FOUND:INTERNAL=1
 //Details about finding Git
 FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.50.1 (Apple Git-155)()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/opt/homebrew/bin/pkg-config][v2.5.1()]
 //Details about finding Python
 FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[/usr/local/bin/python3][cfound components: Interpreter ][v3.13.7()]
 //Details about finding Threads

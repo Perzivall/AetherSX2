@@ -16,6 +16,7 @@
 #include <netdb.h>
 #include <android/log.h>
 #include <errno.h>
+#include <GLES3/gl3.h> // REQUIRED FOR GOD MODE CONSTANTS
 #endif
 
 namespace Aether {
@@ -197,6 +198,108 @@ void RemotePlay::HandleClient(int clientSocket) {
     }
     
     close(clientSocket);
+}
+
+#include <dlfcn.h> // For dynamic loading
+
+// =========================================================
+//  "GOD MODE" LOGIC: ZERO-COPY-ISH HARDWARE DOWNSCALER
+// =========================================================
+
+// Function Pointers for Dynamic GLES3 Loading
+typedef void (*PFNGLGENFRAMEBUFFERSPROC)(int, unsigned int*);
+typedef void (*PFNGLGENTEXTURESPROC)(int, unsigned int*);
+typedef void (*PFNGLBINDTEXTUREPROC)(unsigned int, unsigned int);
+typedef void (*PFNGLTEXIMAGE2DPROC)(unsigned int, int, int, int, int, int, unsigned int, unsigned int, const void*);
+typedef void (*PFNGLTEXPARAMETERIPROC)(unsigned int, unsigned int, int);
+typedef void (*PFNGLBINDFRAMEBUFFERPROC)(unsigned int, unsigned int);
+typedef void (*PFNGLFRAMEBUFFERTEXTURE2DPROC)(unsigned int, unsigned int, unsigned int, unsigned int, int);
+typedef void (*PFNGLBLITFRAMEBUFFERPROC)(int, int, int, int, int, int, int, int, unsigned int, unsigned int);
+typedef void (*PFNGLREADPIXELSPROC)(int, int, int, int, unsigned int, unsigned int, void*);
+typedef void (*PFNGLVIEWPORTPROC)(int, int, int, int);
+
+static PFNGLGENFRAMEBUFFERSPROC p_glGenFramebuffers = nullptr;
+static PFNGLGENTEXTURESPROC p_glGenTextures = nullptr;
+static PFNGLBINDTEXTUREPROC p_glBindTexture = nullptr;
+static PFNGLTEXIMAGE2DPROC p_glTexImage2D = nullptr;
+static PFNGLTEXPARAMETERIPROC p_glTexParameteri = nullptr;
+static PFNGLBINDFRAMEBUFFERPROC p_glBindFramebuffer = nullptr;
+static PFNGLFRAMEBUFFERTEXTURE2DPROC p_glFramebufferTexture2D = nullptr;
+static PFNGLBLITFRAMEBUFFERPROC p_glBlitFramebuffer = nullptr;
+static PFNGLREADPIXELSPROC p_glReadPixels = nullptr;
+
+static unsigned int g_myFbo = 0;
+static unsigned int g_myTex = 0;
+static unsigned int g_srcFbo = 0;
+static const int TARGET_W = 1920; // 1080p Full HD
+static const int TARGET_H = 1080;
+
+void RemotePlay::CaptureHardwareFrame(unsigned int srcTexID, int srcW, int srcH) {
+    if (!m_running) return;
+
+    // 0. Dynamic Load GLES3 Symbols (Bypass Linker Hell)
+    if (!p_glBlitFramebuffer) {
+        void* lib = dlopen("libGLESv3.so", RTLD_LAZY);
+        if (!lib) lib = dlopen("libGLESv2.so", RTLD_LAZY);
+        if (!lib) {
+            __android_log_print(ANDROID_LOG_ERROR, "AetherRemote", "Failed to load GLES lib");
+            return;
+        }
+        
+        p_glGenFramebuffers = (PFNGLGENFRAMEBUFFERSPROC)dlsym(lib, "glGenFramebuffers");
+        p_glGenTextures = (PFNGLGENTEXTURESPROC)dlsym(lib, "glGenTextures");
+        p_glBindTexture = (PFNGLBINDTEXTUREPROC)dlsym(lib, "glBindTexture");
+        p_glTexImage2D = (PFNGLTEXIMAGE2DPROC)dlsym(lib, "glTexImage2D");
+        p_glTexParameteri = (PFNGLTEXPARAMETERIPROC)dlsym(lib, "glTexParameteri");
+        p_glBindFramebuffer = (PFNGLBINDFRAMEBUFFERPROC)dlsym(lib, "glBindFramebuffer");
+        p_glFramebufferTexture2D = (PFNGLFRAMEBUFFERTEXTURE2DPROC)dlsym(lib, "glFramebufferTexture2D");
+        p_glBlitFramebuffer = (PFNGLBLITFRAMEBUFFERPROC)dlsym(lib, "glBlitFramebuffer");
+        p_glReadPixels = (PFNGLREADPIXELSPROC)dlsym(lib, "glReadPixels");
+
+        if (!p_glBlitFramebuffer) return; // Critical failure
+    }
+
+    // 1. One-time Setup of Target FBO (The optimized screen)
+    if (g_myFbo == 0) {
+        p_glGenFramebuffers(1, &g_myFbo);
+        p_glGenTextures(1, &g_myTex);
+        
+        p_glBindTexture(GL_TEXTURE_2D, g_myTex);
+        p_glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, TARGET_W, TARGET_H, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr);
+        p_glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        p_glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        
+        p_glBindFramebuffer(GL_FRAMEBUFFER, g_myFbo);
+        p_glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, g_myTex, 0);
+        
+        // Setup Source FBO Wrapper
+        p_glGenFramebuffers(1, &g_srcFbo);
+    }
+    
+    // 2. Wrap the Game's Texture in an FBO so we can Blit from it
+    p_glBindFramebuffer(GL_READ_FRAMEBUFFER, g_srcFbo);
+    p_glFramebufferTexture2D(GL_READ_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_TEXTURE_2D, srcTexID, 0);
+    
+    // 3. Bind our Target FBO
+    p_glBindFramebuffer(GL_DRAW_FRAMEBUFFER, g_myFbo);
+    
+    // 4. HARDWARE BLIT (The Magic)
+    // FIX: Flip Y-axis (OpenGL 0,0 is bottom-left, we want top-left)
+    // We swap srcY0 (srcH) and srcY1 (0) to invert the read
+    p_glBlitFramebuffer(0, srcH, srcW, 0, 0, 0, TARGET_W, TARGET_H, GL_COLOR_BUFFER_BIT, GL_LINEAR);
+    
+    // 5. Read Back the TINY buffer (Fast!)
+    p_glBindFramebuffer(GL_READ_FRAMEBUFFER, g_myFbo);
+    
+    // Re-use a static buffer to avoid allocs
+    static std::vector<unsigned int> smallPixels(TARGET_W * TARGET_H);
+    p_glReadPixels(0, 0, TARGET_W, TARGET_H, GL_RGBA, GL_UNSIGNED_BYTE, smallPixels.data());
+    
+    // Cleanup state to avoid confusing PCSX2
+    p_glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    
+    // 6. Send to Encoder
+    Frame(TARGET_W, TARGET_H, smallPixels);
 }
 
 }

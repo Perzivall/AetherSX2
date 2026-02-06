@@ -19,6 +19,7 @@ public:
     void Stop();
     
     bool IsActive() const { return m_active; }
+    void CaptureHardwareFrame(unsigned int srcTexID, int srcW, int srcH); // Restoring God Mode
 
 private:
     RemotePlay();
